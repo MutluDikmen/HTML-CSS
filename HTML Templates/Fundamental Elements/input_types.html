@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!--Button-->
+    <p>The button below activates a JavaScript when it is clicked.</p>
+    <form>
+      <input type="button" value="Click me" onclick="msg()">
+    </form>
+    <script>
+    function msg() {
+      alert("Hello world!");
+    }
+    </script>
+
+    <hr />
+    <!--Checkboxes-->
+    <form action="/action_page.php">
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--Color Picker-->
+    <form action="/action_page.php">
+      <label for="favcolor">Select your favorite color:</label>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Date-->
+    <form action="/action_page.php">
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday">
+      <input type="month" id="bdaymonth" name="bdaymonth">
+      <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+      <input type="time" id="appt" name="appt">
+      <input type="week" id="week" name="week">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Email-->
+    <form action="/action_page.php">
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email">
+      <input type="submit">
+    </form>
+    <!--Allows multiple email addresses. Separate each email address with a comma.-->
+    <form action="/action_page.php">
+      <label for="emails">Enter email addresses:</label>
+      <input type="email" id="emails" name="emails" multiple>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--File-->
+    <form action="/action_page.php">
+      <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile"><br><br>
+      <input type="submit">
+    </form>
+     <!--Allows multiple files.-->
+    <form action="/action_page.php">
+      <label for="myfile">Select files:</label>
+      <input type="file" id="myfile" name="myfile" multiple><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Hidden-->
+    <!--
+      1st <a href="http://example.com" style="display: none;">unseen</a> link.<br />
+      2nd <a href="http://example.com" style="visibility: hidden;">unseen</a> link.<br />
+      3rd <a href="http://example.com" style="opacity: 0;">unseen</a> link.
+    -->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="hidden" id="custId" name="custId" value="3487">
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--Image-->
+    <img src="https://www.jquery-az.com/html/images/banana.jpg" title="Title of image" alt="alt text here"/>
+    
+
+    <hr />
+    <!--Number-->
+    <form action="/action_page.php">
+      <label for="quantity">Quantity (between 1 and 5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Password-->
+    <form action="/action_page.php">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Radio Button-->
+    <form action="/action_page.php">
+      <p>Please select your favorite Web language:</p>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--Range-->
+    <form action="/action_page.php">
+      <label for="vol">Volume (between 0 and 50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Reset Button-->
+    <form action="/action_page.php">
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email"><br><br>
+    
+      <label for="pin">Enter a PIN:</label>
+      <input type="text" id="pin" name="pin" maxlength="4"><br><br>  
+    
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--Search-->
+    <form action="/action_page.php">
+      <label for="gsearch">Search Google:</label>
+      <input type="search" id="gsearch" name="gsearch">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--Telephone Input-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname">
+      <label for="phone">Enter a phone number:</label><br><br>
+      <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+      <small>Format: 123-45-678</small><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--URL-->
+    <form action="/action_page.php">
+      <label for="homepage">Add your homepage:</label>
+      <input type="url" id="homepage" name="homepage"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!---->
+
+    <hr />
+    <!---->
+
+
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!--The input accept attribute-->
+    <form action="/action_page.php">
+      <label for="img">Select image:</label>
+      <input type="file" id="img" name="img" accept="image/*">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input alt attribute-->
+    <p>Click on the image, and the input will be sent to a page on the server called "/action_page.php".</p>
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname">
+      <input type="image" src="submit.gif" alt="Submit" width="48" height="48">
+    </form>
+
+    <hr />
+    <!--The autocomplete attribute-->
+    <p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+    <p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field!</p>
+    <form action="/action_page.php" autocomplete="on">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" autocomplete="off"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The autofocus attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" autofocus><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input checked attribute-->
+    <form action="/action_page.php" method="get">
+      <input type="checkbox" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" name="vehicle3" value="Boat" checked>
+      <label for="vehicle3"> I have a boat</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--The input disabled attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" disabled><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--The form attribute-->
+    <form action="/action_page.php" id="form1">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <p>The "Last name" field below is outside the form element, but still part of the form.</p>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" form="form1">
+
+    <hr />
+    <!--The formaction attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formaction="/action_page2.php" value="Submit to another page">
+    </form>
+
+    <hr />
+    <!--The formmethod attribute-->
+    <form action="/action_page.php" method="get" target="_blank">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formmethod="post" value="Submit using POST">
+    </form>
+
+    <hr />
+    <!--The datalist element-->
+    <form action="/action_page.php" method="get">
+      <label for="browser">Choose your browser from the list:</label>
+      <input list="browsers" name="browser" id="browser">
+      <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input max and min attributes-->
+    <form action="/action_page.php">
+      <label for="datemax">Enter a date before 1980-01-01:</label>
+      <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+    
+      <label for="datemin">Enter a date after 2000-01-01:</label>
+      <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+    
+      <label for="quantity">Quantity (between 1 and 5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+    
+      <input type="submit">
+    </form>
+    
+    <hr />
+    <!--The input minlength and maxlength attribute-->
+    <form action="/action_page.php">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" maxlength="10"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="8"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--The input multiple attribute-->
+    <form action="/action_page.php">
+      <label for="files">Select files:</label>
+      <input type="file" id="files" name="files" multiple><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input pattern attribute-->
+    <form action="/action_page.php">
+      <label for="country_code">Country code:</label>
+      <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input placeholder attribute-->
+    <form action="/action_page.php">
+      <label for="phone">Enter a phone number:</label><br><br>
+      <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+      <small>Format: 123-45-678</small><br><br>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input readonly attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="country">Country:</label>  
+      <input type="text" id="country" name="country" value="Norway" readonly><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--The input required attribute-->
+    <form action="/action_page.php">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input size attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" size="10"><br><br>
+      <label for="pin">PIN:</label>
+      <input type="text" id="pin" name="pin" maxlength="9" size="4"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr />
+    <!--The input step attribute-->
+    <form action="/action_page.php">
+      <label for="points">Points:</label>
+      <input type="number" id="points" name="points" step="3">
+      <input type="submit">
+    </form>
+
+    <hr />
+    <!--The input value attribute-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" value="John"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>

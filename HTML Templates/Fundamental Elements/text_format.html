@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!--bold text-->
+    <p>This is normal text - <b>and this is bold text</b>.</p>
+
+    <hr />
+    <!--The bdi element-->
+    <p>
+      In the example below, usernames are shown along with the number of points
+      in a contest. If the bdi element is not supported in the browser, the
+      username of the Arabic user would confuse the text (the bidirectional
+      algorithm would put the colon and the number "90" next to the word "User"
+      rather than next to the word "points").
+    </p>
+    <ul>
+      <li>User <bdi>Ali</bdi>: 60 points</li>
+      <li>User <bdi>Veli</bdi>: 80 points</li>
+      <li>User <bdi>إيان</bdi>: 90 points</li>
+    </ul>
+
+    <hr />
+    <!--The bdo element-->
+    <p>This paragraph will go left-to-right.</p>
+    <p><bdo dir="rtl">This paragraph will go right-to-left.</bdo></p>
+
+    <hr />
+    <!--The blockquote element-->
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+      For 50 years, WWF has been protecting the future of nature. The world's
+      leading conservation organization, WWF works in 100 countries and is
+      supported by 1.2 million members in the United States and close to 5
+      million globally.
+    </blockquote>
+
+    <hr />
+    <!--The cite element-->
+    <img src="img_the_scream.jpg" width="220" height="277" alt="The Scream" />
+    <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+    <hr />
+    <!--The pre element-->
+    <pre>
+      Text in a pre element
+      is displayed in a fixed-width
+      font, and it preserves
+      both      spaces and
+      line breaks
+    </pre>
+
+    <hr />
+    <!--The code element-->
+    <pre>
+      <code>
+      class GFG { // Program begins with a call to main() // Print "Hello,
+      World" to the terminal window public static void main(String args[]) {
+      System.out.println("Hello, World"); } }
+    </code>
+  </pre>
+
+    <hr />
+    <!--The deleted and inserted element-->
+    <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+    <hr />
+    <!--The dfn element-->
+    <p>
+      <dfn title="HyperText Markup Language">HTML</dfn> is the standard markup
+      language for creating web pages.
+    </p>
+
+    <hr />
+    <!--The em element-->
+    <p>You <em>have</em> to hurry up!</p>
+
+    <hr />
+    <!--The i element-->
+    <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+
+    <hr />
+    <!--The kbd element-->
+    <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+    <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+    <hr />
+    <!--The mark element-->
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+
+    <hr />
+    <!--The meter element-->
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br />
+    <label for="disk_d">Disk usage D:</label>
+    <meter id="disk_d" value="0.6">60%</meter>
+
+    <hr />
+    <!--The progress element-->
+    <label for="file">Downloading progress:</label>
+    <progress id="file" value="32" max="100">32%</progress>
+
+    <hr />
+    <!--The q element-->
+    <p>
+      WWF's goal is to:
+      <q>Build a future where people live in harmony with nature.</q>
+      We hope they succeed.
+    </p>
+
+    <hr />
+    <!--The s element-->
+    <p><s>Only 50 tickets left!</s></p>
+    <p>SOLD OUT!</p>
+
+    <hr />
+    <!--The samp element-->
+    <p>Message from my computer:</p>
+    <p>
+      <samp>File not found.<br />Press F1 to continue</samp>
+    </p>
+
+    <hr />
+    <!--The small element-->
+    <p>This is some normal text.</p>
+    <p><small>This is some smaller text.</small></p>
+
+    <hr />
+    <!--The strong element-->
+    <p>This text is normal.</p>
+    <p><strong>This text is important!</strong></p>
+
+    <hr />
+    <!--The sub and sup elements-->
+    <p>This text contains <sub>subscript</sub> text.</p>
+    <p>This text contains <sup>superscript</sup> text.</p>
+
+    <hr />
+    <!--The template Element-->
+    <p>
+      Click the button below to display the hidden content from the template
+      element.
+    </p>
+    <button onclick="showContent()">Show hidden content</button>
+    <template>
+      <h2>Flower</h2>
+      <img src="img_white_flower.jpg" width="214" height="204" />
+    </template>
+    <script>
+      function showContent() {
+        var temp = document.getElementsByTagName("template")[0];
+        var clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+      }
+    </script>
+
+    <hr />
+    <!--The u element-->
+    <p>This is some <u>mispeled</u> text.</p>
+
+    <hr />
+    <!--The var element-->
+    <p>
+      The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where
+      <var>b</var> is the base, and <var>h</var> is the vertical height.
+    </p>
+  </body>
+</html>

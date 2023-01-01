@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <!--An HTML form with two input fields and one submit button-->
+    <form action="/action_page.php">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <p>
+      Click the "Submit" button and the form-data will be sent to a page on the
+      server called "action_page.php".
+    </p>
+
+    <hr>
+    <!--Form with checkboxes-->
+    <form action="/action_page.php" method="get">
+      <input type="checkbox" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" name="vehicle3" value="Boat" checked />
+      <label for="vehicle3"> I have a boat</label><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <hr>
+    <!--Form with radio buttons-->
+    <form action="/action_page.php" method="get">
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS" checked="checked">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+      
+    <hr>
+    <!--The form accept-charset attribute-->
+    <form action="/action_page.php" accept-charset="utf-8">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <hr>
+    <!--The form autocomplete attribute-->  
+    <p>Fill in and submit the form, then reload the page, start to fill in the form again - and see how autocomplete works.</p>
+    <p>Then, try to set autocomplete to "off".</p>
+    
+    <form action="/action_page.php" method="get" autocomplete="on">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email"><br><br>
+      <input type="submit">
+    </form>
+
+    <hr>
+    <!--The form enctype attribute-->
+    <form action="/action_page_binary.asp" method="post" enctype="multipart/form-data">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+    <!--The form novalidate attribute-->
+    <form action="/action_page.php" novalidate>
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <input type="submit">
+    </form>
+      
+    <hr>
+    <!--The form target attribute-->
+    <!--_
+      blank	The response is displayed in a new window or tab
+      _self	The response is displayed in the same frame (this is default)
+      _parent	The response is displayed in the parent frame
+      _top	The response is displayed in the full body of the window-->
+    <form action="/action_page.php" method="get" target="_blank">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
